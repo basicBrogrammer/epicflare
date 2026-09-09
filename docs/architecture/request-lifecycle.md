@@ -38,7 +38,9 @@ Requests are handled in this order:
 cookie signing (`COOKIE_SECRET`) before creating the app router.
 
 `server/router.ts` maps route patterns from `server/routes.ts` to handler
-modules (home, auth, account, session, logout, password reset, health).
+modules (home, auth, account, session, logout, password reset, health), then
+registers handlers from enabled compile-time modules via `moduleRegistry` (see
+[Modules](../modules.md)).
 
 ## Client-side navigation flow
 

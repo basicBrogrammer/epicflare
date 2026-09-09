@@ -1,4 +1,5 @@
 import { post, route } from 'remix/routes'
+import { moduleRegistry } from '#modules.ts'
 
 export const routes = route({
 	home: '/',
@@ -20,4 +21,5 @@ export const routes = route({
 	logout: post('/logout'),
 	passwordResetRequest: post('/password-reset'),
 	passwordResetConfirm: post('/password-reset/confirm'),
+	...moduleRegistry.routeDefs,
 })

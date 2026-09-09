@@ -1,3 +1,7 @@
+import {
+	composeModuleClientRouteLoaders,
+	composeModuleClientRoutes,
+} from '#modules/client.tsx'
 import { routes } from '#server/routes.ts'
 import { AccountRoute, loadAccountRouteData } from './account.tsx'
 import { ChatRoute, loadChatRouteData } from './chat.tsx'
@@ -20,6 +24,7 @@ export const clientRoutes = {
 	[routes.resetPassword.href()]: <ResetPasswordRoute />,
 	[routes.oauthAuthorize.href()]: <OAuthAuthorizeRoute />,
 	[routes.oauthCallback.href()]: <OAuthCallbackRoute />,
+	...composeModuleClientRoutes(routes),
 }
 
 export const clientRouteLoaders = {
@@ -27,4 +32,5 @@ export const clientRouteLoaders = {
 	'/chat/:threadId': loadChatRouteData,
 	[routes.account.href()]: loadAccountRouteData,
 	[routes.oauthAuthorize.href()]: loadOAuthAuthorizeRouteData,
+	...composeModuleClientRouteLoaders(routes),
 }

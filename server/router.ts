@@ -1,4 +1,5 @@
 import { createRouter } from 'remix/router'
+import { registerEnabledModuleHandlers } from '#modules/server.ts'
 import { type AppEnv } from '#types/env-schema.ts'
 import { createAccountHandler } from './handlers/account.ts'
 import { createAuthHandler } from './handlers/auth.ts'
@@ -60,6 +61,8 @@ export function createAppRouter(appEnv: AppEnv) {
 		routes.passwordResetConfirm,
 		createPasswordResetConfirmHandler(appEnv),
 	)
+
+	registerEnabledModuleHandlers({ router, appEnv, routes })
 
 	return router
 }

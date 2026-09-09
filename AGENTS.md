@@ -26,3 +26,5 @@ This file is intentionally brief. Detailed instructions live in focused docs:
   - [docs/architecture/request-lifecycle.md](./docs/architecture/request-lifecycle.md)
   - [docs/architecture/authentication.md](./docs/architecture/authentication.md)
   - [docs/architecture/data-storage.md](./docs/architecture/data-storage.md)
+- Compile-time modules:
+  - [docs/modules.md](./docs/modules.md)
