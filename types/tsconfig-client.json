@@ -13,6 +13,14 @@
 		"../client/**/*.ts",
 		"../client/**/*.tsx",
 		"../shared/**/*.ts",
+		"../modules.ts",
+		"../modules/define-module.ts",
+		"../modules/registry.ts",
+		"../modules/client-types.ts",
+		"../modules/client.tsx",
+		"../modules/demo/module.ts",
+		"../modules/demo/client.tsx",
+		"../modules/demo/page.tsx",
 		"../server/routes.ts"
 	]
 }

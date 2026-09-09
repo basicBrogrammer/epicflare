@@ -4,6 +4,10 @@ export default defineConfig({
 	test: {
 		environment: 'node',
 		globals: false,
-		include: ['server/**/*.test.ts', 'mock-servers/**/*.test.ts'],
+		include: [
+			'server/**/*.test.ts',
+			'mock-servers/**/*.test.ts',
+			'modules/**/*.test.ts',
+		],
 	},
 })
